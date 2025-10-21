@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación</title>
+    <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+</head>
+<body>
+    <main>
+  <h1 class="h1-restablecer">Restablecer contraseña</h1>
+  <p>Ingrese el código enviado a su correo y defina su nueva contraseña.</p>
+
+  <form class="formulario-codigo-recuperacion">
+    <fieldset class="fieldset-codigo">
+      <label class="label-codigo">Código de recuperación</label>
+      <input
+        class="input-codigo"
+        type="text"
+        inputmode="numeric"
+        required
+        placeholder="Código recibido por correo"
+      /><br /><br />
+
+      <label class="label-nueva-contraseña">Nueva contraseña</label>
+      <input
+        class="input-nueva-contraseña"
+        type="password"
+        required
+        minlength="8"
+        placeholder="Nueva contraseña"
+      /><br /><br />
+
+      <button type="submit" class="boton-nueva-contraseña">
+        Restablecer contraseña
+      </button>
+    </fieldset>
+  </form>
+
+  <nav class="nav-recuperacion">
+    <ul>
+      <li><a href="/CESDE-PROYECTO-SURA-G8/html/login.html" class="ancla-login">Volver al inicio de sesión</a></li>
+    </ul>
+  </nav>
+</main>
+</body>
+</html>

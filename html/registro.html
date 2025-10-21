@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+  </head>
+  <body>
+    <main>
+      <h1 class="h1-registro">Crear cuenta</h1>
+      <form class="formulario-registro">
+        <fieldset class="fieldset-registro">
+          <legend class="legend-registro">Datos de usuario</legend>
+
+          <!-- 1. Datos principales -->
+          <label class="label-nombre-completo">Nombre completo</label>
+          <input
+            class="input-nombre-completo"
+            type="text"
+            required
+            placeholder="Tu nombre completo"
+          /><br /><br />
+
+          <label class="label-correo-registro">Correo electrónico</label>
+          <input
+            class="input-correo-registro"
+            type="email"
+            required
+            placeholder="tú@ejemplo.com"
+          /><br /><br />
+
+          <label class="label-contraseña-registro">Contraseña</label>
+          <input
+            class="input-contraseña-registro"
+            type="password"
+            required
+            minlength="8"
+            placeholder="Mínimo 8 caracteres"
+          /><br /><br />
+
+          <label class="label-confirmar-contraseña">Confirmar contraseña</label>
+          <input
+            class="input-confirmar-contraseña"
+            type="password"
+            required
+            minlength="8"
+            placeholder="Repite la contraseña"
+          /><br /><br />
+
+          <!-- 2. Datos personales -->
+          <label class="label-telefono">Teléfono</label>
+          <input
+            class="input-telefono"
+            type="tel"
+            placeholder="Número de teléfono"
+          /><br /><br />
+
+          <label class="label-fecha-nacimiento">Fecha de nacimiento</label>
+          <input class="input-fecha-nacimiento" type="date" /><br /><br />
+
+          <label class="label-genero">Género</label>
+          <select class="select-genero">
+            <option value="">Selecciona...</option>
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+            <option value="other">Otro / Prefiero no decir</option></select
+          ><br /><br />
+
+          <!-- 3. Ubicación -->
+          <label class="label-pais">País</label>
+          <input
+            class="input-pais"
+            type="text"
+            placeholder="Su país"
+          /><br /><br />
+
+          <label class="label-ciudad">Ciudad</label>
+          <input
+            class="input-ciudad"
+            type="text"
+            placeholder="Ciudad"
+          /><br /><br />
+
+          <label class="label-direccion">Dirección</label>
+          <input
+            class="input-direccion"
+            type="text"
+            placeholder="Dirección"
+          /><br /><br />
+
+          <!-- 4. Crear Cuenta -->
+          <button type="submit" class="boton-registro">Crear cuenta</button
+          ><br />
+        </fieldset>
+      </form>
+
+      <nav class="nav-registro">
+        <ul>
+          <li>
+            ¿Ya tienes cuenta?
+            <a href="/CESDE-PROYECTO-SURA-G8/html/login.html" class="ancla-login">Inicia sesión</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>
