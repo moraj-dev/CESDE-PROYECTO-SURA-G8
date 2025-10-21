@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificados</title>
+  <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css" />
+</head>
+
+<body class="style-body">
+
+  <main class="style-main">
+    <section class="style-section">
+      <h1 class="style-h1 titulo-principal">Generar Certificados</h1>
+
+<a class="ancla-inferior-izquierda" href="pagina_principal.html">Asistencia y evaluaciones</a>
+
+      <form id="certificado-form">
+
+        <p class="parrafos">
+          <label class="style-label" for="nombre">Nombre del estudiante:</label>
+          <input class="style-input-text" type="text" name="nombre" id="nombre" placeholder="Ingresa el nombre completo" required />
+        </p>
+
+        <p class="parrafos">
+          <label class="style-label" for="curso">Nombre del curso:</label>
+          <input class="style-input-text" type="text" name="curso" id="curso" placeholder="Ejemplo: Programación Básica" required />
+        </p>
+
+        <p class="parrafos">
+          <label class="style-label" for="fecha">Fecha de finalización:</label>
+          <input class="style-input-date" type="date" name="fecha" id="fecha" required />
+        </p>
+
+        <p class="parrafos">
+          <label class="style-label" for="codigo">Código del certificado:</label>
+          <input class="style-input-text" type="text" name="codigo" id="codigo" placeholder="Ejemplo: 2025-ABC123" required />
+        </p>
+
+        <p class="parrafos">
+          <label class="style-label" for="docente">Docente encargado:</label>
+          <input class="style-input-text" type="text" name="docente" id="docente" placeholder="Nombre del docente" required />
+        </p>
+
+        <p class="parrafos">
+          <button class="style-button" type="submit">Generar Certificado</button>
+          <button class="style-button" type="reset">Limpiar Campos</button>
+        </p>
+      </form>
+
+      <!-- Div con clase para certificado generado -->
+      <div class="certificado-generado"></div>
+      
+    </section>
+  </main>
+
+  
+
+  <script>
+    const form = document.getElementById('certificado-form');
+    const certificadoDiv = document.querySelector('.certificado-generado');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const nombre = form.nombre.value.trim();
+      const curso = form.curso.value.trim();
+      const fecha = form.fecha.value;
+      const codigo = form.codigo.value.trim();
+      const docente = form.docente.value.trim();
+
+      if (!nombre || !curso || !fecha || !codigo || !docente) {
+        alert('Por favor llena todos los campos');
+        return;
+      }
+
+      const fechaObj = new Date(fecha);
+      const fechaFormateada = fechaObj.toLocaleDateString('es-ES', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      });
+
+      certificadoDiv.innerHTML = `
+        <h2>Certificado de Finalización</h2>
+        <p>Se certifica que <strong>${nombre}</strong> ha completado satisfactoriamente el curso <strong>${curso}</strong>.</p>
+        <p>Fecha de finalización: <strong>${fechaFormateada}</strong></p>
+        <p>Código del certificado: <strong>${codigo}</strong></p>
+        <p>Docente encargado: <strong>${docente}</strong></p>
+      `;
+
+      form.reset();
+      certificadoDiv.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+
+</html>
