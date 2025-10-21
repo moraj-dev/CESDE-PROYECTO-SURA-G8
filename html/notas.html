@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Notas</title>
+  <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+</head>
+
+<body class="style-body">
+<a class="ancla-inferior-izquierda" href="pagina_principal.html">Asistencia y evaluaciones</a>
+
+  <main class="style-main contenedor-principal">
+    <h1 class="style-h1 titulo-principal">Nota</h1>
+
+    <fieldset class="fieldset-registro">
+      <legend>Calificaciones</legend>
+
+      <p class="parrafos">
+        <label class="style-label" for="asignatura">Asignatura:</label>
+        <select class="style-select" name="Asignaturas" id="asignatura" required>
+          <option value="">Seleccionar</option>
+          <option value="curso de logica">Curso de Lógica</option>
+          <option value="curso de reposteria">Curso de Repostería</option>
+          <option value="curso de finanzas">Curso de Finanzas</option>
+          <option value="curso de riesgo">Curso de Riesgo</option>
+        </select>
+      </p>
+
+      <p class="parrafos">
+        <label class="style-label" for="grupo">Grupo:</label>
+        <input class="style-input-text" type="text" name="grupo" id="grupo" required>
+      </p>
+
+      <p class="parrafos">
+        <label class="style-label" for="fecha_evaluacion">Fecha:</label>
+        <input class="style-input-date" type="date" name="fecha_evaluacion" id="fecha_evaluacion" required>
+      </p>
+
+      <p class="parrafos">
+        <label class="style-label" for="docente">Docente:</label>
+        <input class="style-input-text" type="text" name="docente" id="docente" required>
+      </p>
+
+      <table class="style-table" role="table">
+        <thead class="style-thead">
+          <tr class="style-tr">
+            <th class="style-th">Estudiante</th>
+            <th class="style-th">Calificación 1</th>
+            <th class="style-th">Calificación 2</th>
+            <th class="style-th">Calificación 3</th>
+            <th class="style-th">Calificación Final</th>
+          </tr>
+        </thead>
+        <tbody class="style-tbody">
+          <tr class="style-tr">
+            <td class="style-td">
+              <input class="style-input-text" type="text" name="estudiante_nombre" required>
+            </td>
+            <td class="style-td">
+              <input class="style-input-number" type="number" name="nota1" step="0.1" min="0" max="5" required>
+            </td>
+            <td class="style-td">
+              <input class="style-input-number" type="number" name="nota2" step="0.1" min="0" max="5" required>
+            </td>
+            <td class="style-td">
+              <input class="style-input-number" type="number" name="nota3" step="0.1" min="0" max="5" required>
+            </td>
+            <td class="style-td">
+              <input class="style-input-number" type="number" name="notaFinal" step="0.1" readonly>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="button" type="button" onclick="guardarNota()">Guardar Nota</button>
+    </fieldset>
+  </main>
+
+  <script>
+    function guardarNota() {
+      const n1 = parseFloat(document.querySelector('[name="nota1"]').value) || 0;
+      const n2 = parseFloat(document.querySelector('[name="nota2"]').value) || 0;
+      const n3 = parseFloat(document.querySelector('[name="nota3"]').value) || 0;
+      const notaFinal = document.querySelector('[name="notaFinal"]');
+
+      // Calcula el promedio con un decimal
+      const promedio = ((n1 + n2 + n3) / 3).toFixed(1);
+
+      notaFinal.value = promedio;
+      alert('Nota guardada correctamente: ' + promedio);
+    }
+  </script>
+
+  <footer class="style-footer">
+    <p class="parrafos">© 2025 Centro Educativo</p>
+  </footer>
+
+</body>
+
+</html>

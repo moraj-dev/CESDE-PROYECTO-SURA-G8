@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reportes de Asistencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+</head>
+<body>
+
+<a class="ancla-inferior-izquierda" href="pagina_principal.html">Asistencia y evaluaciones</a>
+  <main>
+    <h1 class="h1-registro">Reportes de Asistencia</h1>
+
+    <form class="style-forms" id="formulario">
+      <label class="style-label" for="universidad">Universidad:</label>
+      <input type="text" id="universidad" placeholder="Ej: CESDE">
+
+      <label class="style-label" for="asignatura">Asignatura:</label>
+      <input type="text" id="asignatura" placeholder="Ej: Frontend">
+
+      <label class="style-label" for="grupo">Grupo:</label>
+      <input type="text" id="grupo" placeholder="Ej: Sura DS-8">
+
+      <label class="style-label" for="docente">Docente:</label>
+      <input type="text" id="docente" placeholder="Ej: Kris R">
+
+      <label class="style-label" for="nombre">Nombre del estudiante:</label>
+      <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+
+      <label class="style-label" for="documento">Documento:</label>
+      <input type="text" id="documento" placeholder="Ej: 123456789">
+
+      <label class="style-label" for="asistencia">Asistencia:</label>
+      <select id="asistencia">
+        <option value="">Seleccione...</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select> <br>
+
+      <label class="style-label" for="fecha" style="position: static;">Fecha:</label>
+      <input type="date" id="fecha">
+
+      <button type="submit">Guardar</button>
+    </form>
+
+    <section class="section-inicio">
+      <h2>Tabla de Asistencia</h2>
+      <div style="overflow-x: auto;">
+        <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 1.5rem;">
+          <thead>
+            <tr style="background-color: var(--azul-medio); color: white;">
+              <th>Universidad</th>
+              <th>Asignatura</th>
+              <th>Grupo</th>
+              <th>Docente</th>
+              <th>Nombre</th>
+              <th>Documento</th>
+              <th>Asistencia</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-body" style="text-align: center;"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById('formulario');
+      const tablaBody = document.getElementById('tabla-body');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const universidad = document.getElementById('universidad').value;
+        const asignatura = document.getElementById('asignatura').value;
+        const grupo = document.getElementById('grupo').value;
+        const docente = document.getElementById('docente').value;
+        const nombre = document.getElementById('nombre').value;
+        const documento = document.getElementById('documento').value;
+        const asistencia = document.getElementById('asistencia').value;
+        const fecha = document.getElementById('fecha').value;
+
+        if (!universidad || !asignatura || !grupo || !docente || !nombre || !documento || !asistencia || !fecha) {
+          alert("Por favor llena todos los campos");
+          return;
+        }
+
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${universidad}</td>
+          <td>${asignatura}</td>
+          <td>${grupo}</td>
+          <td>${docente}</td>
+          <td>${nombre}</td>
+          <td>${documento}</td>
+          <td>${asistencia}</td>
+          <td>${fecha}</td>
+        `;
+
+        tablaBody.appendChild(fila);
+        form.reset();
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
