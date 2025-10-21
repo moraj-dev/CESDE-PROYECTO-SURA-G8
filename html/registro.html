@@ -4,105 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
-    <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
   </head>
-  <body>
+  <body class="body-registro">
     <main>
-      <h1 class="h1-registro">Crear cuenta</h1>
-      <form class="formulario-registro">
-        <fieldset class="fieldset-registro">
-          <legend class="legend-registro">Datos de usuario</legend>
+  <h1 class="h1-registro">Crear cuenta</h1>
+  <form class="formulario-registro">
 
-          <!-- 1. Datos principales -->
+      <div class="grupo-form">
+        <div>
           <label class="label-nombre-completo">Nombre completo</label>
-          <input
-            class="input-nombre-completo"
-            type="text"
-            required
-            placeholder="Tu nombre completo"
-          /><br /><br />
+          <input class="input-nombre-completo" type="text" placeholder="Tu nombre completo" required />
+        </div>
 
+        <div>
           <label class="label-correo-registro">Correo electrónico</label>
-          <input
-            class="input-correo-registro"
-            type="email"
-            required
-            placeholder="tú@ejemplo.com"
-          /><br /><br />
+          <input class="input-correo-registro" type="email" placeholder="tú@ejemplo.com" required />
+        </div>
 
+        <div>
           <label class="label-contraseña-registro">Contraseña</label>
-          <input
-            class="input-contraseña-registro"
-            type="password"
-            required
-            minlength="8"
-            placeholder="Mínimo 8 caracteres"
-          /><br /><br />
+          <input class="input-contraseña-registro" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required />
+        </div>
 
+        <div>
           <label class="label-confirmar-contraseña">Confirmar contraseña</label>
-          <input
-            class="input-confirmar-contraseña"
-            type="password"
-            required
-            minlength="8"
-            placeholder="Repite la contraseña"
-          /><br /><br />
+          <input class="input-confirmar-contraseña" type="password" placeholder="Repite la contraseña" minlength="8" required />
+        </div>
 
-          <!-- 2. Datos personales -->
+        <div>
           <label class="label-telefono">Teléfono</label>
-          <input
-            class="input-telefono"
-            type="tel"
-            placeholder="Número de teléfono"
-          /><br /><br />
+          <input class="input-telefono" type="tel" placeholder="Número de teléfono" />
+        </div>
 
+        <div>
           <label class="label-fecha-nacimiento">Fecha de nacimiento</label>
-          <input class="input-fecha-nacimiento" type="date" /><br /><br />
+          <input class="input-fecha-nacimiento" type="date" />
+        </div>
 
+        <div>
           <label class="label-genero">Género</label>
           <select class="select-genero">
             <option value="">Selecciona...</option>
             <option value="male">Masculino</option>
             <option value="female">Femenino</option>
-            <option value="other">Otro / Prefiero no decir</option></select
-          ><br /><br />
+            <option value="other">Otro / Prefiero no decir</option>
+          </select>
+        </div>
 
-          <!-- 3. Ubicación -->
+        <div>
           <label class="label-pais">País</label>
-          <input
-            class="input-pais"
-            type="text"
-            placeholder="Su país"
-          /><br /><br />
+          <input class="input-pais" type="text" placeholder="Su país" />
+        </div>
 
+        <div>
           <label class="label-ciudad">Ciudad</label>
-          <input
-            class="input-ciudad"
-            type="text"
-            placeholder="Ciudad"
-          /><br /><br />
+          <input class="input-ciudad" type="text" placeholder="Ciudad" />
+        </div>
 
+        <div>
           <label class="label-direccion">Dirección</label>
-          <input
-            class="input-direccion"
-            type="text"
-            placeholder="Dirección"
-          /><br /><br />
+          <input class="input-direccion" type="text" placeholder="Dirección" />
+        </div>
+      </div>
 
-          <!-- 4. Crear Cuenta -->
-          <button type="submit" class="boton-registro">Crear cuenta</button
-          ><br />
-        </fieldset>
-      </form>
+      <button type="submit" class="boton-registro">Crear cuenta</button>
+  </form>
 
-      <nav class="nav-registro">
-        <ul>
-          <li>
-            ¿Ya tienes cuenta?
-            <a href="/CESDE-PROYECTO-SURA-G8/html/login.html" class="ancla-login">Inicia sesión</a>
-          </li>
-        </ul>
-      </nav>
-    </main>
+  <nav class="nav-registro">
+    <ul>
+      <li>¿Ya tienes cuenta? <a href="/html/login.html" class="ancla-login">Inicia sesión</a></li>
+    </ul>
+  </nav>
+</main>
   </body>
 </html>
