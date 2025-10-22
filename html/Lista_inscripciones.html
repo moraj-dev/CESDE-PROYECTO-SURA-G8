@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Inscripciones - CESDE</title>
+    <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+</head>
+
+<body>
+    <div class="curso-catalogo-container">
+
+        <header class="curso-catalogo-header">
+            <h1 class="curso-catalogo-h1">LISTA DE INSCRIPCIONES</h1>
+            <p class="curso-catalogo-subtitle">Gestión y control de estudiantes inscritos</p>
+        </header>
+
+        <nav class="curso-catalogo-filters">
+            <a href="index.html">Catálogo de Cursos</a>
+            <a href="Inscripcion.html">Inscripciones</a>
+            <a href="Lista_inscripciones.html">Gestión de Inscripciones</a>
+        </nav>
+
+        <main class="curso-catalogo-sections">
+            <section class="curso-catalogo-section">
+
+                <h2 class="curso-catalogo-category-title">Lista de Estudiantes Inscritos</h2>
+
+                <div class="curso-catalogo-card curso-catalogo-card-full">
+
+                    <div class="curso-catalogo-table-wrapper">
+                        <table class="curso-catalogo-table">
+                            <thead>
+                                <tr>
+                                    <th>Matrícula</th>
+                                    <th>Nombre</th>
+                                    <th>Documento</th>
+                                    <th>Teléfono</th>
+                                    <th>Correo</th>
+                                    <th>Curso</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaInscripciones">
+
+                                <tr>
+                                    <td>2025001</td>
+                                    <td>Juan Pérez García</td>
+                                    <td>1234567890</td>
+                                    <td>3001234567</td>
+                                    <td>juan.perez@example.com</td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Swift iOS</span>
+                                    </td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-web">Inscripto</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025002</td>
+                                    <td>María López Ramírez</td>
+                                    <td>9876543210</td>
+                                    <td>3109876543</td>
+                                    <td>maria.lopez@example.com</td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Kotlin Android</span>
+                                    </td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-web">Inscripto</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025003</td>
+                                    <td>Carlos Mendoza Silva</td>
+                                    <td>5555555555</td>
+                                    <td>3155555555</td>
+                                    <td>carlos.mendoza@example.com</td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-mobile">React Native</span>
+                                    </td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-backend">Pendiente</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025004</td>
+                                    <td>Ana Rodríguez Torres</td>
+                                    <td>7777777777</td>
+                                    <td>3207777777</td>
+                                    <td>ana.rodriguez@example.com</td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Flutter</span>
+                                    </td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-web">Inscripto</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025005</td>
+                                    <td>Luis Gómez Martínez</td>
+                                    <td>3333333333</td>
+                                    <td>3143333333</td>
+                                    <td>luis.gomez@example.com</td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Swift iOS</span>
+                                    </td>
+                                    <td>
+                                        <span class="curso-catalogo-badge curso-catalogo-badge-data">Cancelado</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="curso-catalogo-meta curso-catalogo-mb-15">
+                        <span class="curso-catalogo-level">Total Inscritos: 5</span>
+                        <span class="curso-catalogo-students">Cupos Disponibles: 15</span>
+                    </div>
+
+                    <div class="curso-catalogo-btn-group curso-catalogo-mb-15">
+                        <button type="button" class="curso-catalogo-enroll-btn curso-catalogo-btn-flex">
+              Editar Seleccionado
+            </button>
+                        <button type="button" class="curso-catalogo-enroll-btn curso-catalogo-btn-flex curso-catalogo-btn-danger">
+              Eliminar Seleccionado
+            </button>
+                        <button type="button" class="curso-catalogo-enroll-btn curso-catalogo-btn-flex curso-catalogo-btn-success">
+              Actualizar Estado
+            </button>
+                    </div>
+
+                    <a href="/inscripcion.html" class="curso-catalogo-enroll-btn curso-catalogo-btn-dark">
+            Volver al Formulario de Inscripción
+          </a>
+
+                </div>
+
+                <div class="curso-catalogo-grid curso-catalogo-mt-2">
+
+                    <div class="curso-catalogo-card">
+                        <div class="curso-catalogo-card-header">
+                            <span class="curso-catalogo-badge curso-catalogo-badge-web">Activos</span>
+                            <span class="curso-catalogo-duration">3 estudiantes</span>
+                        </div>
+                        <h3 class="curso-catalogo-card-title">Estudiantes Inscritos</h3>
+                        <p class="curso-catalogo-description">
+                            Estudiantes que han completado su proceso de inscripción y están activos en sus respectivos cursos.
+                        </p>
+                    </div>
+
+                    <div class="curso-catalogo-card">
+                        <div class="curso-catalogo-card-header">
+                            <span class="curso-catalogo-badge curso-catalogo-badge-backend">En Proceso</span>
+                            <span class="curso-catalogo-duration">1 estudiante</span>
+                        </div>
+                        <h3 class="curso-catalogo-card-title">Inscripciones Pendientes</h3>
+                        <p class="curso-catalogo-description">
+                            Estudiantes que han iniciado el proceso de inscripción pero aún no han completado todos los requisitos.
+                        </p>
+                    </div>
+
+                    <div class="curso-catalogo-card">
+                        <div class="curso-catalogo-card-header">
+                            <span class="curso-catalogo-badge curso-catalogo-badge-data">Cancelados</span>
+                            <span class="curso-catalogo-duration">1 estudiante</span>
+                        </div>
+                        <h3 class="curso-catalogo-card-title">Inscripciones Canceladas</h3>
+                        <p class="curso-catalogo-description">
+                            Estudiantes que cancelaron su inscripción o no cumplieron con los requisitos establecidos.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="curso-catalogo-footer">
+            <p>© 2025 CESDE - Centro de Servicios y Desarrollo Empresarial | Todos los derechos reservados</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
