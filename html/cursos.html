@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Cursos de Programación - SURA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="curso-catalogo-body">
+<div class="curso-catalogo-container">
+
+  <header class="curso-catalogo-header">
+    <h1 class="curso-catalogo-h1">Catálogo de Cursos de Programación</h1>
+    <p class="curso-catalogo-subtitle">Descubre tu próxima aventura en programación</p>
+  </header>
+
+  <input type="radio" name="category" id="curso-catalogo-all" value="all" checked>
+  <input type="radio" name="category" id="curso-catalogo-web" value="web">
+  <input type="radio" name="category" id="curso-catalogo-backend" value="backend">
+  <input type="radio" name="category" id="curso-catalogo-mobile" value="mobile">
+  <input type="radio" name="category" id="curso-catalogo-data" value="data">
+
+  <nav class="curso-catalogo-filters" role="radiogroup" aria-label="Filtrar por categoría">
+    <label for="curso-catalogo-all">Todos los cursos</label>
+    <label for="curso-catalogo-web">Desarrollo Web</label>
+    <label for="curso-catalogo-backend">Backend</label>
+    <label for="curso-catalogo-mobile">Móvil</label>
+    <label for="curso-catalogo-data">Ciencia de Datos</label>
+    <a href="/inscripcion.html">Inscripciones</a>
+  </nav>
+
+  <div class="curso-catalogo-sections">
+
+    <section class="curso-catalogo-section" data-category="web">
+      <h2 class="curso-catalogo-category-title">Desarrollo Web</h2>
+
+      <div class="curso-catalogo-grid">
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&h=300&fit=crop" alt="Fundamentos del Desarrollo Web" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-web">Desarrollo Web</span>
+            <span class="curso-catalogo-duration">12 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Fundamentos del Desarrollo Web Moderno</h3>
+          <p class="curso-catalogo-description">Domina HTML, CSS y diseño responsivo. Crea sitios web accesibles y atractivos desde cero.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Principiante</span>
+            <span class="curso-catalogo-students">2,543 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>HTML5 y marcado semántico</li>
+            <li>CSS3 con Flexbox/Grid</li>
+            <li>Diseño responsivo</li>
+            <li>Accesibilidad web</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=500&h=300&fit=crop" alt="CSS Avanzado" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-web">Desarrollo Web</span>
+            <span class="curso-catalogo-duration">10 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">CSS Avanzado y Animaciones</h3>
+          <p class="curso-catalogo-description">Lleva tus habilidades en CSS al siguiente nivel. Crea animaciones impresionantes y diseños complejos.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Avanzado</span>
+            <span class="curso-catalogo-students">987 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Animaciones y transiciones</li>
+            <li>Variables personalizadas</li>
+            <li>Diseños avanzados</li>
+            <li>Optimización de rendimiento</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=500&h=300&fit=crop" alt="JavaScript Moderno" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-web">Desarrollo Web</span>
+            <span class="curso-catalogo-duration">8 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">JavaScript Moderno y ES6+</h3>
+          <p class="curso-catalogo-description">Domina JavaScript moderno con ES6+. Aprende programación asíncrona, módulos y las últimas características del lenguaje.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">3,421 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>ES6+ y nuevas características</li>
+            <li>Programación asíncrona</li>
+            <li>Módulos y bundlers</li>
+            <li>Manipulación del DOM</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop" alt="React desde Cero" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-web">Desarrollo Web</span>
+            <span class="curso-catalogo-duration">14 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">React desde Cero</h3>
+          <p class="curso-catalogo-description">Construye aplicaciones web interactivas con React. Aprende componentes, hooks y gestión de estado moderna.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">4,567 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Componentes y Props</li>
+            <li>Hooks de React</li>
+            <li>Gestión de estado global</li>
+            <li>React Router y navegación</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="curso-catalogo-section" data-category="backend">
+      <h2 class="curso-catalogo-category-title">Desarrollo Backend</h2>
+
+      <div class="curso-catalogo-grid">
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&h=300&fit=crop" alt="Backend con Python" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-backend">Backend</span>
+            <span class="curso-catalogo-duration">16 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Desarrollo Backend con Python</h3>
+          <p class="curso-catalogo-description">Aprende programación del lado del servidor con Python. Crea APIs robustas y gestiona bases de datos eficientemente.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">1,892 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Fundamentos de Python</li>
+            <li>Diseño de APIs REST</li>
+            <li>Gestión de bases de datos</li>
+            <li>Autenticación y seguridad</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop" alt="Node.js y Express" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-backend">Backend</span>
+            <span class="curso-catalogo-duration">18 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Node.js y Express</h3>
+          <p class="curso-catalogo-description">Desarrolla aplicaciones backend escalables con Node.js y Express. Aprende arquitectura de microservicios y APIs RESTful.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">2,134 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Node.js y asincronía</li>
+            <li>Express.js framework</li>
+            <li>MongoDB y bases de datos NoSQL</li>
+            <li>Despliegue y DevOps</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="Java Spring Boot" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-backend">Backend</span>
+            <span class="curso-catalogo-duration">20 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Java Spring Boot</h3>
+          <p class="curso-catalogo-description">Construye aplicaciones empresariales con Spring Boot. Domina el framework más popular para desarrollo backend en Java.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Avanzado</span>
+            <span class="curso-catalogo-students">1,567 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Spring Boot fundamentals</li>
+            <li>JPA y Hibernate</li>
+            <li>Seguridad con Spring Security</li>
+            <li>Microservicios con Spring Cloud</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop" alt="GraphQL y APIs" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-backend">Backend</span>
+            <span class="curso-catalogo-duration">12 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">GraphQL y APIs Modernas</h3>
+          <p class="curso-catalogo-description">Aprende a diseñar y construir APIs modernas con GraphQL. Optimiza consultas y mejora el rendimiento de tus aplicaciones.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Avanzado</span>
+            <span class="curso-catalogo-students">892 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>GraphQL queries y mutations</li>
+            <li>Schema design</li>
+            <li>Apollo Server</li>
+            <li>Optimización y caching</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="curso-catalogo-section" data-category="mobile">
+      <h2 class="curso-catalogo-category-title">Desarrollo Móvil</h2>
+
+      <div class="curso-catalogo-grid">
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop" alt="Desarrollo con Swift" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Móvil</span>
+            <span class="curso-catalogo-duration">14 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Desarrollo de Apps con Swift</h3>
+          <p class="curso-catalogo-description">Crea aplicaciones nativas para iOS usando Swift. Aprende los fundamentos de la arquitectura móvil.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">1,456 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Lenguaje Swift</li>
+            <li>UIKit y SwiftUI</li>
+            <li>Publicación en App Store</li>
+            <li>Patrones de UX móvil</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=500&h=300&fit=crop" alt="Desarrollo Android con Kotlin" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Móvil</span>
+            <span class="curso-catalogo-duration">16 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Desarrollo Android con Kotlin</h3>
+          <p class="curso-catalogo-description">Construye aplicaciones Android modernas con Kotlin. Domina Jetpack Compose y las mejores prácticas de desarrollo móvil.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">2,234 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Kotlin programming</li>
+            <li>Jetpack Compose</li>
+            <li>Android Architecture Components</li>
+            <li>Google Play deployment</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="img/cientifico-informatico-instalando-cables-de-electrodos-en-el-auricular-de-eeg.jpg" alt="React Native" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Móvil</span>
+            <span class="curso-catalogo-duration">12 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">React Native para Multiplataforma</h3>
+          <p class="curso-catalogo-description">Desarrolla apps para iOS y Android con una sola base de código usando React Native. Acelera tu desarrollo móvil.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">3,112 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>React Native fundamentals</li>
+            <li>Navegación y routing</li>
+            <li>APIs nativas y plugins</li>
+            <li>Despliegue multiplataforma</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&h=300&fit=crop" alt="Flutter desde Cero" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-mobile">Móvil</span>
+            <span class="curso-catalogo-duration">10 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Flutter desde Cero</h3>
+          <p class="curso-catalogo-description">Crea hermosas apps multiplataforma con Flutter. Aprende Dart y construye interfaces fluidas y responsivas.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Principiante</span>
+            <span class="curso-catalogo-students">2,789 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Dart language basics</li>
+            <li>Widgets y layouts</li>
+            <li>State management</li>
+            <li>Animaciones y gestos</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="curso-catalogo-section" data-category="data">
+      <h2 class="curso-catalogo-category-title">Ciencia de Datos</h2>
+
+      <div class="curso-catalogo-grid">
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" alt="Ciencia de Datos con Python" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-data">Ciencia de Datos</span>
+            <span class="curso-catalogo-duration">20 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Ciencia de Datos con Python</h3>
+          <p class="curso-catalogo-description">Sumérgete en análisis de datos, visualización y aprendizaje automático. Transforma datos en conocimiento.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Intermedio</span>
+            <span class="curso-catalogo-students">3,201 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Pandas y NumPy</li>
+            <li>Visualización de datos</li>
+            <li>Análisis estadístico</li>
+            <li>Fundamentos de Machine Learning</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop" alt="Machine Learning Avanzado" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-data">Ciencia de Datos</span>
+            <span class="curso-catalogo-duration">16 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Machine Learning Avanzado</h3>
+          <p class="curso-catalogo-description">Profundiza en algoritmos de aprendizaje automático. Implementa modelos predictivos y sistemas de recomendación.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Avanzado</span>
+            <span class="curso-catalogo-students">1,876 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Algoritmos supervisados</li>
+            <li>Aprendizaje no supervisado</li>
+            <li>Redes neuronales</li>
+            <li>Optimización de modelos</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop" alt="Big Data con Apache Spark" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-data">Ciencia de Datos</span>
+            <span class="curso-catalogo-duration">18 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Big Data con Apache Spark</h3>
+          <p class="curso-catalogo-description">Procesa grandes volúmenes de datos con Apache Spark. Aprende análisis distribuido y procesamiento en tiempo real.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Avanzado</span>
+            <span class="curso-catalogo-students">1,234 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Spark Core y RDDs</li>
+            <li>DataFrames y SQL</li>
+            <li>Streaming en tiempo real</li>
+            <li>MLlib para ML distribuido</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+
+        <div class="curso-catalogo-card">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop" alt="Deep Learning con TensorFlow" class="curso-catalogo-image" />
+          <div class="curso-catalogo-card-header">
+            <span class="curso-catalogo-badge curso-catalogo-badge-data">Ciencia de Datos</span>
+            <span class="curso-catalogo-duration">14 semanas</span>
+          </div>
+          <h3 class="curso-catalogo-card-title">Deep Learning con TensorFlow</h3>
+          <p class="curso-catalogo-description">Domina redes neuronales profundas con TensorFlow. Construye modelos de IA para visión computacional y NLP.</p>
+          <div class="curso-catalogo-meta">
+            <span class="curso-catalogo-level">Avanzado</span>
+            <span class="curso-catalogo-students">2,456 estudiantes</span>
+          </div>
+          <ul class="curso-catalogo-topics">
+            <li>Redes neuronales convolucionales</li>
+            <li>Procesamiento de lenguaje natural</li>
+            <li>Transfer learning</li>
+            <li>Despliegue de modelos</li>
+          </ul>
+          <a href="/inscripcion.html" class="curso-catalogo-enroll-btn">Inscribirse ahora</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="curso-catalogo-footer">
+    <p>© 2025 Catálogo de Cursos SURA. Todos los derechos reservados.</p>
+  </footer>
+</div>
+</body>
+</html>
