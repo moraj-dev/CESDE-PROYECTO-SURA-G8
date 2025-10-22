@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevas Inscripciones - CESDE</title>
+    <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css" />
+</head>
+
+<body>
+    <div class="curso-catalogo-container">
+
+        <header class="curso-catalogo-header">
+            <h1 class="curso-catalogo-h1">INSCRIPCIONES CESDE</h1>
+            <p class="curso-catalogo-subtitle">Formulario de registro para nuevos estudiantes</p>
+        </header>
+
+
+        <nav class="curso-catalogo-filters">
+            <a href="index.html">Catálogo de Cursos</a>
+            <a href="Inscripcion.html">Inscripciones</a>
+            <a href="Lista_inscripciones.html">Gestión de Inscripciones</a>
+        </nav>
+
+        <main class="curso-catalogo-sections">
+            <section class="curso-catalogo-section">
+
+                <h2 class="curso-catalogo-category-title">Formulario de Inscripción</h2>
+
+                <div class="curso-catalogo-grid-center">
+
+                    <div class="curso-catalogo-card">
+                        <form id="formInscripcion">
+
+                            <div class="curso-catalogo-meta">
+                                <label for="curso" class="curso-catalogo-level">Curso:</label>
+                            </div>
+                            <select id="curso" name="curso" required class="curso-catalogo-select">
+                <option value="">Seleccione un curso</option>
+                <option value="swift">Desarrollo de Apps con Swift</option>
+                <option value="kotlin">Desarrollo Android con Kotlin</option>
+                <option value="react-native">React Native para Multiplataforma</option>
+                <option value="flutter">Flutter desde Cero</option>
+              </select>
+
+                            <div class="curso-catalogo-meta">
+                                <label for="cupos" class="curso-catalogo-level">Cupos disponibles:</label>
+                                <input type="text" id="cupos" name="cupos" value="20" readonly class="curso-catalogo-input-readonly" />
+                            </div>
+
+                            <div class="curso-catalogo-meta">
+                                <label for="matricula" class="curso-catalogo-level">Matrícula:</label>
+                            </div>
+                            <input type="text" id="matricula" name="matricula" required class="curso-catalogo-input" />
+
+                            <div class="curso-catalogo-meta">
+                                <label for="nombre" class="curso-catalogo-level">Nombre completo:</label>
+                            </div>
+                            <input type="text" id="nombre" name="nombre" required class="curso-catalogo-input" />
+
+                            <div class="curso-catalogo-meta">
+                                <label for="documento" class="curso-catalogo-level">Número de documento:</label>
+                            </div>
+                            <input type="number" id="documento" name="documento" required class="curso-catalogo-input" />
+
+                            <div class="curso-catalogo-meta">
+                                <label for="telefono" class="curso-catalogo-level">Teléfono:</label>
+                            </div>
+                            <input type="tel" id="telefono" name="telefono" required class="curso-catalogo-input" />
+
+                            <div class="curso-catalogo-meta">
+                                <label for="correo" class="curso-catalogo-level">Correo electrónico:</label>
+                            </div>
+                            <input type="email" id="correo" name="correo" required class="curso-catalogo-input" />
+
+                            <div class="curso-catalogo-meta">
+                                <label for="estado" class="curso-catalogo-level">Estado de inscripción:</label>
+                            </div>
+                            <select id="estado" name="estado" required class="curso-catalogo-select">
+                <option value="pendiente">Pendiente</option>
+                <option value="inscripto">Inscripto</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+
+                            <div class="curso-catalogo-btn-group">
+                                <button type="submit" class="curso-catalogo-enroll-btn curso-catalogo-btn-flex">Registrar</button>
+                                <button type="reset" class="curso-catalogo-enroll-btn curso-catalogo-btn-flex curso-catalogo-btn-danger">Limpiar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="curso-catalogo-card">
+                        <h3 class="curso-catalogo-card-title">Información Importante</h3>
+                        <p class="curso-catalogo-description">
+                            Complete todos los campos del formulario para realizar su inscripción. Asegúrese de proporcionar información correcta y actualizada.
+                        </p>
+
+                        <ul class="curso-catalogo-topics">
+                            <li>Verifique los cupos disponibles antes de inscribirse</li>
+                            <li>El número de matrícula debe ser único</li>
+                            <li>Use un correo electrónico válido</li>
+                            <li>El teléfono debe incluir código de área</li>
+                            <li>Puede cambiar el estado después de registrar</li>
+                        </ul>
+
+                        <a href="Lista_inscripciones.html" class="curso-catalogo-enroll-btn">
+              Ver Lista de Inscripciones
+            </a>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="curso-catalogo-footer">
+            <p>© 2025 CESDE - Centro de Servicios y Desarrollo Empresarial | Todos los derechos reservados</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
