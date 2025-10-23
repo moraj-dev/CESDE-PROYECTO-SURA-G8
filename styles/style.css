@@ -149,33 +149,143 @@ h3.style-h3 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.columna {
-  flex: 1;
-  min-width: 300px;
-}
-
-.style-article {
-  border-bottom: 1px solid var(--gris-claro);
-  padding: 1rem 0;
-}
-
-.style-article:last-child {
-  border-bottom: none;
-}
-
-.style-parrafos {
-  margin: 0.5rem 0;
-  color: var(--texto-oscuro);
-}
-
 /* === CONTENEDOR PRINCIPAL === */
 .contenedor {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
+}
+
+/* Columna izquierda - Información Personal */
+.columna.izquierda {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.columna.izquierda img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: block;
+  border: 3px solid var(--azul-medio);
+}
+
+.columna.izquierda .parrafos {
+  margin: 0.8rem 0;
+  color: var(--texto-oscuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.columna.izquierda strong {
+  color: var(--azul-medio);
+}
+
+/* Columna derecha - Cursos y contenido */
+.columna.derecha {
+  grid-column: 2;
+}
+
+.style-article {
+  background-color: var(--gris-claro);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.style-article .style-h3,
+.style-article .style-parrafos {
+  grid-column: 1;
+  margin: 0;
+}
+
+.style-article .style-button {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.style-button {
+  background-color: var(--azul-medio);
+  color: var(--blanco);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.style-button:hover {
+  background-color: var(--azul-oscuro);
+  transform: translateY(-2px);
+}
+
+/* Secciones adicionales */
+.contenedor > .style-section:not(.columna) {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.style-section .style-parrafos {
+  background-color: var(--gris-claro);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.style-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.style-li {
+  background-color: var(--gris-claro);
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  color: var(--texto-oscuro);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .columna.izquierda {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .columna.derecha,
+  .contenedor > .style-section:not(.columna) {
+    grid-column: 1;
+  }
+
+  .style-article {
+    grid-template-columns: 1fr;
+  }
+
+  .style-article .style-button {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 
 /* === FORMULARIO REGISTRO === */
