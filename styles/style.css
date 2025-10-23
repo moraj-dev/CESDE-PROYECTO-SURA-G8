@@ -17,6 +17,11 @@ body {
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body:not(.page-principal) main:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: 0.3s ease;
@@ -404,6 +409,68 @@ footer {
   padding: 1.2rem 0;
   margin-top: auto;
 }
+
+/* Scoped styles for the registro page to avoid leaking to other pages */
+.page-registro .registro-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100vw;
+}
+.page-registro .registro-side {
+  padding: 3.5rem;
+  box-sizing: border-box;
+}
+.page-registro .registro-side--left {
+  background: linear-gradient(180deg,var(--azul-medio) 0%, #eaf4fb 100%);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+}
+.page-registro .registro-left-inner {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.registro-logo { max-width: 140px; margin-bottom: 1rem; }
+.registro-title { font-size: 2.2rem; margin: 0 0 0.5rem; color: #00384B; }
+.registro-sub { color: rgba(0,0,0,0.7); }
+.registro-benefits { margin-top: 1.2rem; color: rgba(0,0,0,0.65); }
+
+.page-registro .registro-side--right {
+  background: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registro-right-inner { width: 100%; max-width: 720px; padding: 1rem 2rem; }
+.registro-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 8px 24px rgba(3,56,91,0.06); }
+.registro-card h2 { margin: 0 0 0.25rem; color: var(--azul-medio); }
+.registro-lead { margin: 0 0 1rem; color: var(--gris-oscuro); }
+
+.registro-form .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+.registro-form label { display: block; font-size: 0.95rem; color: var(--gris-oscuro); }
+.registro-form input,
+.registro-form select { width: 100%; padding: 0.65rem 0.8rem; border-radius: 8px; border: 1px solid #e6eef5; background: #fafcfe; box-sizing: border-box; }
+.registro-form .help-text { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+
+.form-actions { margin-top: 1.2rem; display:flex; gap:0.75rem; align-items:center; }
+.boton-registro { background: var(--azul-medio); color: var(--blanco); border: none; padding: 0.75rem 1.1rem; border-radius: 8px; cursor: pointer; box-shadow: 0 6px 18px rgba(3,56,91,0.08); }
+.boton-tercero { background: transparent; color: var(--azul-medio); border: 1px solid rgba(3,56,91,0.12); padding: 0.65rem 1rem; border-radius: 8px; cursor: pointer; }
+
+.registro-ask { margin-top: 1rem; font-size: 0.95rem; color: var(--gris-oscuro); }
+.registro-ask a { color: var(--azul-medio); text-decoration: none; }
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .page-registro .registro-split { grid-template-columns: 1fr; }
+  .registro-right-inner { padding: 1rem; }
+  .registro-form .grid-2 { grid-template-columns: 1fr; }
+}
+
 
 footer p {
   margin: 0.3rem 0;
@@ -2010,71 +2077,130 @@ input[type="radio"] {
    (contenido original: register.css)
    ===================== */
 
+/* ------------------
+   Estilos registrados mejorados para "Crear cuenta"
+   Conservan las mismas clases que el HTML existente.
+   Diseño: tarjeta centrada, izquierda informativa, entrada clara y botones prominentes.
+   ------------------ */
+
 .body-registro {
-  background: linear-gradient(135deg, #f4f8ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 60%);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2.5rem 1rem;
+  color: var(--azul-oscuro);
 }
 
 .register-container {
-  width: 100%;
-  max-width: 1200px;
-  background: transparent;
+  width: 100vw;
   display: grid;
+  /* dividir la pantalla en dos columnas iguales para que ambos paneles ocupen toda la altura */
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: stretch;
+  gap: 0;
+  box-sizing: border-box;
+  min-height: 100vh; /* ocupar toda la pantalla */
+  padding: 0; /* quitar márgenes laterales */
+}
+
+/* Asegurar que el aside quede en la columna izquierda y el formulario en la derecha */
+.register-left {
+  grid-column: 1 / 2;
+}
+
+.register-right {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center; /* centrar verticalmente la tarjeta del formulario */
+  justify-content: center;
+  padding: 1.2rem 0;
 }
 
 .register-left {
-  background: linear-gradient(180deg, #0072ce10, #ffffff);
-  border-radius: 12px;
-  padding: 2.5rem;
+  background: linear-gradient(180deg, rgba(0,114,206,0.06), rgba(255,255,255,0.6));
+  padding: 0; /* sin padding lateral */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  color: #07385b;
+  justify-content: center; /* centrar contenido verticalmente */
+  align-items: center;
+  color: var(--azul-oscuro);
+  min-height: 100vh;
 }
 
 .register-logo {
-  width: 140px;
+  width: 120px;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .register-title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--azul-oscuro);
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 0.25rem 0 0.6rem 0;
+  font-weight: 700;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.register-logo {
+  width: 96px;
+  height: auto;
+  margin: 0 0 0.4rem 0;
+}
+
+.register-title {
+  font-size: 1.05rem;
+  color: var(--azul-oscuro);
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.05;
 }
 
 .register-lead {
-  color: rgba(0,0,0,0.7);
-  margin: 0.5rem 0 1rem 0;
+  margin-top: 0.6rem;
 }
 
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.register-welcome h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.05rem;
+  color: var(--azul-oscuro);
 }
+
+.register-welcome p {
+  margin: 0 0 0.8rem 0;
+  color: rgba(3,56,91,0.85);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.help-text {
+  display: block;
+  margin-top: 0.35rem;
+  color: rgba(3,56,91,0.6);
+  font-size: 0.85rem;
+}
+
 
 .benefits-list li {
-  background: #ffffff;
-  margin: 0.5rem 0;
-  padding: 0.7rem 1rem;
+  background: var(--blanco);
+  margin: 0;
+  padding: 0.6rem 0.85rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  color: var(--texto-oscuro);
+  box-shadow: 0 1px 6px rgba(3,56,91,0.04);
+  color: var(--azul-medio);
+  font-weight: 600;
 }
 
 .register-illustration img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 1rem;
+  object-fit: cover;
 }
 
 .register-right {
@@ -2083,26 +2209,49 @@ input[type="radio"] {
   justify-content: center;
 }
 
+.register-right {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* sin padding lateral */
+}
+
 .form-card {
-  background: #ffffff;
-  border-radius: 12px;
+  background: var(--blanco);
+  border-radius: 14px;
   padding: 2rem;
   width: 100%;
-  max-width: 520px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  max-width: none; /* ocupar todo el ancho de la columna */
+  box-shadow: 0 10px 30px rgba(3,56,91,0.07);
+  border: 1px solid rgba(3,56,91,0.04);
+}
+
+.form-subtitle {
+  margin: 0 0 0.6rem 0;
+  color: rgba(3,56,91,0.8);
+  font-size: 0.95rem;
+}
+
+.form-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(3,56,91,0.06), rgba(3,56,91,0.02));
+  margin: 1rem 0 1.2rem 0;
 }
 
 .h1-registro {
   margin: 0 0 1rem 0;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   color: var(--azul-oscuro);
   text-align: left;
+  font-weight: 700;
 }
 
 .formulario-registro .grupo-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 1.2rem;
+  gap: 1rem 1.25rem;
 }
 
 .formulario-registro .grupo-form > div {
@@ -2110,20 +2259,142 @@ input[type="radio"] {
   flex-direction: column;
 }
 
+/* permitir que algunos campos ocupen ambas columnas */
+.col-span-2 {
+  grid-column: 1 / -1;
+}
+
+/* Ajustes finos para espaciamiento y la posición del botón */
+.formulario-registro .grupo-form {
+  margin-bottom: 0.8rem;
+}
+
+.form-card .boton-registro {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* Centrar el boton manteniendo espacio alrededor */
+.form-card .nav-registro {
+  margin-top: 1rem;
+}
+
 .formulario-registro input,
 .formulario-registro select {
   width: 100%;
-  padding: 0.7rem;
-  border-radius: 8px;
-  border: 1px solid #e6eef8;
+  padding: 0.85rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(3,56,91,0.08);
   background: #fbfdff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  transition: all 0.18s ease;
+  font-size: 0.98rem;
 }
 
-.formulario-registro .boton-registro {
+/* Inputs con icono */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 10px;
+  top: 38px; /* debajo del label */
+  width: 18px;
+  height: 18px;
+  fill: rgba(3,56,91,0.5);
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  padding-left: 40px; /* dejar espacio para icono */
+}
+
+/* efecto cuando el input tiene foco: cambiar color del icono y resaltar borde */
+.input-with-icon:focus-within .input-icon {
+  fill: var(--azul-medio);
+  transform: translateX(0);
+  transition: fill 0.18s ease, transform 0.18s ease;
+}
+
+.input-with-icon input:focus {
+  border-color: var(--azul-medio);
+}
+
+/* inputs inválidos (HTML5) */
+.input-with-icon input:invalid {
+  border-color: #e05a5a;
+  box-shadow: 0 6px 18px rgba(224,90,90,0.06);
+}
+
+/* transición suave general para inputs */
+.input-with-icon input,
+.input-with-icon select {
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.12s ease;
+}
+
+/* Ajustes del botón para hacerlo más visible */
+.boton-registro {
+  background: linear-gradient(90deg, #0072ce, #0033a0);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  font-size: 1.02rem;
+  box-shadow: 0 10px 30px rgba(3,56,91,0.12);
+  border: 0;
+}
+
+.boton-registro:active {
+  transform: translateY(1px) scale(0.998);
+}
+
+.formulario-registro input::placeholder {
+  color: rgba(3,56,91,0.4);
+}
+
+.formulario-registro input:focus,
+.formulario-registro select:focus {
+  outline: none;
+  border-color: var(--azul-medio);
+  box-shadow: 0 6px 18px rgba(0,114,206,0.06);
+  transform: translateY(-1px);
+}
+
+.label-nombre-completo,
+.label-correo-registro,
+.label-contraseña-registro,
+.label-confirmar-contraseña,
+.label-telefono,
+.label-fecha-nacimiento,
+.label-genero,
+.label-pais,
+.label-ciudad,
+.label-direccion {
+  color: var(--azul-medio);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.boton-registro {
+  background: linear-gradient(90deg, var(--azul-medio), var(--azul-oscuro));
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   width: 100%;
-  max-width: 260px;
-  margin: 1rem auto 0 auto;
-  display: block;
+  max-width: 320px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boton-registro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 26px rgba(3,56,91,0.12);
 }
 
 .nav-registro {
@@ -2134,24 +2405,33 @@ input[type="radio"] {
 /* Responsive: apilar en pantallas pequeñas */
 @media (max-width: 900px) {
   .register-container {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .register-left {
-  order: 2;
+    order: 2;
+    min-height: auto;
   }
 
   .register-right {
-  order: 1;
+    order: 1;
   }
 
   .formulario-registro .grupo-form {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .form-card {
-  padding: 1.5rem;
+    padding: 1.25rem;
   }
+}
+
+/* Pequeños ajustes para móvil muy pequeño */
+@media (max-width: 420px) {
+  .form-card { padding: 1rem; }
+  .register-left { padding: 1rem; }
+  .h1-registro { font-size: 1.1rem; }
 }
 
 /* FIN: estilos consolidados */
