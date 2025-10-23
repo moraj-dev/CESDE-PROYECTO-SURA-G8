@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Principal</title>
-    <link rel="stylesheet" href="/CESDE-PROYECTO-SURA-G8/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css" />
   </head>
+
   <body class="page-principal">
     <header>
-    <nav>
-      <ul>
-        <li><a href="/CESDE-PROYECTO-SURA-G8/html/cursos.html">Catálogo de Cursos</a></li>
-        <li><a href="/CESDE-PROYECTO-SURA-G8/html/Inscripcion.html">Gestión de Inscripciones</a></li>
-        <li><a href="/CESDE-PROYECTO-SURA-G8/html/perfil.html">Perfil del Colaborador</a></li>
-        <li><a href="/CESDE-PROYECTO-SURA-G8/html/pagina_principal.html">Asistencia y Evaluaciones</a></li>
-        <li><a href="/CESDE-PROYECTO-SURA-G8/html/login.html">Cerrar sesión</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/html/cursos.html">Catálogo de Cursos</a></li>
+          <li><a href="/html/inscripcion.html">Gestión de Inscripciones</a></li>
+          <li><a href="/html/perfil.html">Perfil del Colaborador</a></li>
+          <li>
+            <a href="/html/pagina_principal.html">Asistencia y Evaluaciones</a>
+          </li>
+          <li><a href="/index.html">Cerrar sesión</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <h1>Sistema Gestión de Conocimiento</h1>
-      <section class="section-inicio">
-        <h2>Bienvenido/a (nombre del usuario)</h2>
+
+    <h1 class="h1-inicio">Sistema de Gestión de Conocimiento</h1>
+
+    <main class="main-inicio">
+      <section class="panel-bienvenida">
+        <h2>¡Bienvenido/a, <span>(Nombre del usuario)</span>!</h2>
+        <p>Accede rápidamente a las secciones principales del sistema:</p>
+
+        <div class="dashboard">
+          <div class="card">Cursos inscritos: <strong></strong></div>
+          <div class="card">Evaluaciones pendientes: <strong>2</strong></div>
+          <div class="card">Asistencias registradas: <strong>5/6</strong></div>
+        </div>
+      </section>
+
+      <section class="info-sura">
+        <h3>Convenio SURA - CESDE</h3>
         <p>
-          En este sistema de gestión de conocimiento podrás acceder al catálogo
-          de cursos disponibles, realizar y consultar tus inscripciones,
-          actualizar tu perfil de colaborador y hacer seguimiento a tu
-          asistencia y evaluaciones. Usa el menú superior para navegar entre las
-          diferentes secciones y aprovechar al máximo los recursos del convenio
-          SURA - CESDE.
+          Este sistema apoya la formación continua de los colaboradores mediante
+          el acceso a cursos, certificaciones y seguimiento académico.
         </p>
       </section>
     </main>
+
     <footer>
-      <img class="suralogo" src="/CESDE-PROYECTO-SURA-G8/img/sura-negro.webp" alt="sura">
+      <img class="suralogo" src="/img/sura-negro.webp" alt="Logo SURA" />
       <p>&copy; 2025 Sistema de Gestión de Conocimiento</p>
       <p>Proyecto Integrador SURA G8 - CESDE 2025</p>
     </footer>
