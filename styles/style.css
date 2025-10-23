@@ -656,7 +656,7 @@ footer p {
   margin-bottom: 0.8rem;
 }
 
-boton,
+.boton,
 .boton-secundario {
   display: inline-block;
   background-color: var(--azul-medio);
